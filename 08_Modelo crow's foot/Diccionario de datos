@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="DicDat" />
+    <meta name="description" content="BD Digital´s_Menu" />
+    <title>Digital´s_Menu Diccionario</title>
+    <style type="text/css">
+    table{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    abbr{
+        cursor: help;
+    }
+    table, td, th{
+        border-style: solid;
+        border-width: 1px;
+    }
+    table caption{
+        font-size: 120%;
+        font-weight: bold;
+    }
+    caption{
+        color: black;
+    }
+    td, th{
+        border-color: silver;
+    }
+    tr:hover{
+        color: #333;
+        background-color: #F2F2F2;
+    }
+    th{
+        background-color: silver;
+    }
+    td{
+        color: gray;
+    }
+    ul{
+        font-style: italic;
+    }
+    #title-sect{
+        color: gray;
+        text-align: right;
+    }
+    .proj-desc{
+        text-align: right;
+    }
+    </style>
+</head>
+<body>
+<div id="title-sect">
+<h1>BD Digital´s_Menu<br> Diccionario de Datos</h1>
+<p>
+<em>2022-09-15</em>
+</p>
+<p class="proj-desc">
+<em></em>
+</p>
+</div>
+<h2>Índice</h2>
+<ul>
+<li><a href='#cliente'>cliente</a></li>
+<li><a href='#encargado'>encargado</a></li>
+<li><a href='#menu'>menu</a></li>
+<li><a href='#num_menu'>num_menu</a></li>
+<li><a href='#numero_reservacion'>numero_reservacion</a></li>
+<li><a href='#persona'>persona</a></li>
+<li><a href='#persona_has_role'>persona_has_role</a></li>
+<li><a href='#role'>role</a></li>
+<li><a href='#tipo_documento'>tipo_documento</a></li>
+</ul>
+<table id='cliente'>
+<caption>cliente</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>t_cliente</td>
+    <td>INT(2)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>ide_cliente</td>
+    <td>CHAR(10)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) este campo es una llave foranea de la entidad persona, en este campo podrá almacenar todos los números de documento de los clientes.</td>
+</tr>
+<table id='encargado'>
+<caption>encargado</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>t_encargado</td>
+    <td>INT(2)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>ide_encargado</td>
+    <td>CHAR(10)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) este campo es una llave foranea de la entidad persona, en este campo podrá almacenar todos los números de documento de los encargados.</td>
+</tr>
+<table id='menu'>
+<caption>menu</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>id_menu</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar el  número de id de las imágenes.</td>
+</tr>
+<tr>
+    <td>nombre</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar el  nombre de cada imagen.</td>
+</tr>
+<tr>
+    <td>imagen</td>
+    <td>LONGBLOB</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar las imágenes.</td>
+</tr>
+<tr>
+    <td>descripcion</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la descripcion de las imágenes.</td>
+</tr>
+<tr>
+    <td>ide_encargado</td>
+    <td>INT(2)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) eta es una llave foránea de la tabla encargado y en este campo se podrá almacenar el  número de referencia de todos los encargados.</td>
+</tr>
+<table id='num_menu'>
+<caption>num_menu</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>mesa_id</td>
+    <td>INT(2)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Sr(a) en este campo se almacenará el número de id de  las mesas</td>
+</tr>
+<tr>
+    <td>num_mesa</td>
+    <td>INT(3)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo se almacenará el número de cada mesa</td>
+</tr>
+<table id='numero_reservacion'>
+<caption>numero_reservacion</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>n_reservacion</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar el numero de reservacion</td>
+</tr>
+<tr>
+    <td>fecha_hora</td>
+    <td>DATETIME(20)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la fecha y la hora de cada reservación</td>
+</tr>
+<tr>
+    <td>observaciones</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar las observaciones de cada reservación.</td>
+</tr>
+<tr>
+    <td>mesa_id</td>
+    <td>INT(3)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) este campo es una llave foránea de la entidad num_mesa, en este campo se almacenará el número de cada mesa.</td>
+</tr>
+<tr>
+    <td>num_personas</td>
+    <td>INT(2)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo se podrá describir el número de personas en la reservación</td>
+</tr>
+<tr>
+    <td>ide_encargado</td>
+    <td>INT(2)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) este campo es una llave foranea de la entidad persona, en este campo podrá almacenar todos los números de documento de los encargados.</td>
+</tr>
+<tr>
+    <td>ide_cliente</td>
+    <td>INT(2)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) este campo es una llave foranea de la entidad persona, en este campo podrá almacenar todos los números de documento de los clientes.</td>
+</tr>
+<table id='persona'>
+<caption>persona</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>ide_persona</td>
+    <td>CHAR(10)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar todos los números de documento de todas las personas</td>
+</tr>
+<tr>
+    <td>nombre_completo</td>
+    <td>VARCHAR(75)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar el nombre completo de todas las personas</td>
+</tr>
+<tr>
+    <td>cod_tipo_doc</td>
+    <td>VARCHAR(7)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a)  este campo es una llave foranea de la entidad tipo_documento y en esta se podra almacenar el codigo del tipo de documento</td>
+</tr>
+<tr>
+    <td>correo</td>
+    <td>VARCHAR(40)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar los correos electrónicos</td>
+</tr>
+<tr>
+    <td>celular</td>
+    <td>VARCHAR(16)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar los números de celular</td>
+</tr>
+<tr>
+    <td>contrasena</td>
+    <td>VARCHAR(15)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar las contraseñas.</td>
+</tr>
+<table id='persona_has_role'>
+<caption>persona_has_role</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>persona_has_role</td>
+    <td>INT(2)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar el  número de referencia entre las tablas persona y role.</td>
+</tr>
+<tr>
+    <td>has_ide_persona</td>
+    <td>CHAR(10)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a)  este campo es una llave foranea de la entidad tipo_documento y en esta se podra almacenar el codigo del tipo de documento</td>
+</tr>
+<tr>
+    <td>has_roleid</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) eta es una llave foránea de la tabla role y en este campo se podrá almacenar el código del tipo de rol.</td>
+</tr>
+<table id='role'>
+<caption>role</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>roleid</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Sr(a) en este campo se podra almacenar el código del tipo de rol</td>
+</tr>
+<tr>
+    <td>rolename</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar los nombres de los roles que se creen </td>
+</tr>
+<tr>
+    <td>roledescription</td>
+    <td>TEXT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la descripción de cada rol</td>
+</tr>
+<table id='tipo_documento'>
+<caption>tipo_documento</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>cod_tipo_doc</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Sr(a) en este campo se podra almacenar el codigo del tipo de documento</td>
+</tr>
+<tr>
+    <td>tipo_documentoco</td>
+    <td>VARCHAR(4)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar los tipos de documento que hay como CC- CE-TI…</td>
+</tr>
+</table>
+</body>
+</html>
