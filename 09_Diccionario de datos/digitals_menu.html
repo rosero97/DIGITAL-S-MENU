@@ -53,7 +53,7 @@
 <div id="title-sect">
 <h1>BD Digital´s_Menu<br> Diccionario de Datos</h1>
 <p>
-<em>2022-09-15</em>
+<em>2022-12-12</em>
 </p>
 <p class="proj-desc">
 <em></em>
@@ -61,18 +61,17 @@
 </div>
 <h2>Índice</h2>
 <ul>
-<li><a href='#cliente'>cliente</a></li>
-<li><a href='#encargado'>encargado</a></li>
+<li><a href='#estado'>estado</a></li>
 <li><a href='#menu'>menu</a></li>
 <li><a href='#num_menu'>num_menu</a></li>
 <li><a href='#numero_reservacion'>numero_reservacion</a></li>
 <li><a href='#persona'>persona</a></li>
-<li><a href='#persona_has_role'>persona_has_role</a></li>
+<li><a href='#restaurante'>restaurante</a></li>
 <li><a href='#role'>role</a></li>
 <li><a href='#tipo_documento'>tipo_documento</a></li>
 </ul>
-<table id='cliente'>
-<caption>cliente</caption>
+<table id='estado'>
+<caption>estado</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
@@ -88,21 +87,8 @@
     <th>Commentarios</th>
 </tr>
 <tr>
-    <td>t_cliente</td>
-    <td>INT(2)</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>ide_cliente</td>
-    <td>CHAR(10)</td>
+    <td>id_estado</td>
+    <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -111,41 +97,12 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) este campo es una llave foranea de la entidad persona, en este campo podrá almacenar todos los números de documento de los clientes.</td>
-</tr>
-<table id='encargado'>
-<caption>encargado</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
+    <td>Sr(a) en este campo se podrá almacenar el código del estado.</td>
 </tr>
 <tr>
-    <td>t_encargado</td>
-    <td>INT(2)</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
+    <td>nombre_estado</td>
+    <td>VARCHAR(20)</td>
     <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>ide_encargado</td>
-    <td>CHAR(10)</td>
-    <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -153,7 +110,20 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) este campo es una llave foranea de la entidad persona, en este campo podrá almacenar todos los números de documento de los encargados.</td>
+    <td>Sr(a) en este campo podrá almacenar los nombres de los estados.</td>
+</tr>
+<tr>
+    <td>descripcion_estado</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la descripción de cada estado.</td>
 </tr>
 <table id='menu'>
 <caption>menu</caption>
@@ -186,7 +156,7 @@
 </tr>
 <tr>
     <td>nombre</td>
-    <td>VARCHAR(20)</td>
+    <td>VARCHAR(45)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -224,8 +194,8 @@
     <td>Sr(a) en este campo podrá almacenar la descripcion de las imágenes.</td>
 </tr>
 <tr>
-    <td>ide_encargado</td>
-    <td>INT(2)</td>
+    <td>id_encargado</td>
+    <td>CHAR(10)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -309,7 +279,7 @@
 </tr>
 <tr>
     <td>fecha_hora</td>
-    <td>DATETIME(20)</td>
+    <td>DATETIME(6)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -360,22 +330,9 @@
     <td>Sr(a) en este campo se podrá describir el número de personas en la reservación</td>
 </tr>
 <tr>
-    <td>ide_encargado</td>
-    <td>INT(2)</td>
-    <td>&nbsp;</td>
+    <td>id_cliente</td>
+    <td>CHAR(10)</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Sr(a) este campo es una llave foranea de la entidad persona, en este campo podrá almacenar todos los números de documento de los encargados.</td>
-</tr>
-<tr>
-    <td>ide_cliente</td>
-    <td>INT(2)</td>
-    <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -384,6 +341,19 @@
     <td class='attr'>&nbsp;</td>
     <td></td>
     <td>Sr(a) este campo es una llave foranea de la entidad persona, en este campo podrá almacenar todos los números de documento de los clientes.</td>
+</tr>
+<tr>
+    <td>id_estado</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) este campo es una llave foránea de la entidad estado, en este campo se almacenará el id  de cada estado.</td>
 </tr>
 <table id='persona'>
 <caption>persona</caption>
@@ -402,7 +372,7 @@
     <th>Commentarios</th>
 </tr>
 <tr>
-    <td>ide_persona</td>
+    <td>id_persona</td>
     <td>CHAR(10)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
@@ -428,8 +398,8 @@
     <td>Sr(a) en este campo podrá almacenar el nombre completo de todas las personas</td>
 </tr>
 <tr>
-    <td>cod_tipo_doc</td>
-    <td>VARCHAR(7)</td>
+    <td>fcod_tipo_doc</td>
+    <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -479,8 +449,21 @@
     <td></td>
     <td>Sr(a) en este campo podrá almacenar las contraseñas.</td>
 </tr>
-<table id='persona_has_role'>
-<caption>persona_has_role</caption>
+<tr>
+    <td>rolid</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) esta es una llave foránea de la tabla rol y en este campo se podrá almacenar el  rol de todas las personas.</td>
+</tr>
+<table id='restaurante'>
+<caption>restaurante</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
@@ -496,33 +479,7 @@
     <th>Commentarios</th>
 </tr>
 <tr>
-    <td>persona_has_role</td>
-    <td>INT(2)</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td>Sr(a) en este campo podrá almacenar el  número de referencia entre las tablas persona y role.</td>
-</tr>
-<tr>
-    <td>has_ide_persona</td>
-    <td>CHAR(10)</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Sr(a)  este campo es una llave foranea de la entidad tipo_documento y en esta se podra almacenar el codigo del tipo de documento</td>
-</tr>
-<tr>
-    <td>has_roleid</td>
+    <td>id_res</td>
     <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
@@ -532,7 +489,85 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) eta es una llave foránea de la tabla role y en este campo se podrá almacenar el código del tipo de rol.</td>
+    <td>Sr(a) en este campo podrá almacenar el número de id del restaurante.</td>
+</tr>
+<tr>
+    <td>nombre_res</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar el nombre del restaurante.</td>
+</tr>
+<tr>
+    <td>direccion</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la dirección del restaurante.</td>
+</tr>
+<tr>
+    <td>telefono</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) este podrá almacenar el teléfono o los teléfonos del restaurante.</td>
+</tr>
+<tr>
+    <td>correo</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) este campo podrá almacenar el correo del restaurante.</td>
+</tr>
+<tr>
+    <td>horario</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo se almacenará el horario del restaurante.</td>
+</tr>
+<tr>
+    <td>id_encargado</td>
+    <td>CHAR(10)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) este campo es una llave foránea de la entidad persona, en este campo podrá almacenar los números de documento de los encargados.</td>
 </tr>
 <table id='role'>
 <caption>role</caption>
@@ -551,7 +586,7 @@
     <th>Commentarios</th>
 </tr>
 <tr>
-    <td>roleid</td>
+    <td>rolid</td>
     <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
@@ -564,7 +599,7 @@
     <td>Sr(a) en este campo se podra almacenar el código del tipo de rol</td>
 </tr>
 <tr>
-    <td>rolename</td>
+    <td>rolname</td>
     <td>VARCHAR(20)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
@@ -577,7 +612,7 @@
     <td>Sr(a) en este campo podrá almacenar los nombres de los roles que se creen </td>
 </tr>
 <tr>
-    <td>roledescription</td>
+    <td>roldescription</td>
     <td>TEXT</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
